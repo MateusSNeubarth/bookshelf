@@ -1,9 +1,12 @@
 package br.com.mateusneubarth.bookshelf.security;
 
-import io.jsonwebtoken.*;
-
-import java.util.List;
-import java.util.stream.Collectors;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.SignatureException;
+import io.jsonwebtoken.UnsupportedJwtException;
 
 public class JWTCreator {
     public static final String HEADER_AUTHORIZATION = "Authorization";
